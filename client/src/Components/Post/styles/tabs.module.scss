@@ -1,0 +1,20 @@
+.tabs {
+    width: 100%;
+    display: block;
+}
+
+.tablinks {
+    width: 100%;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    list-style: none;
+    gap: 2.618rem;
+    font-weight: 800;
+    color: white;
+
+    & *:hover {
+        color: #FFD166;
+        cursor: pointer;
+    }
+}

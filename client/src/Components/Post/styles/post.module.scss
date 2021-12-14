@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: .1px;
+    justify-content: center;
+    margin-top: 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: #021218;
+    padding: 1rem 0;
+}
+
+.votes {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+    border-left: 1px lightgray solid;
+
+    & *:hover {
+        cursor: pointer;
+    }
+}
+
+.main {
+    flex: 11;
+    background-color: #021218;
+    height: fit-content;
+
+    & * {
+        margin-left: .5rem;
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1.25rem;
+    }
+}
+
+.stats {
+    display: flex;
+
+    & .user {
+        width: 30%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
