@@ -7,7 +7,8 @@
     margin-top: 5px;
     border-radius: 8px;
     color: white;
-    background-color: #021218;
+    // background-color: #021218;
+    background-color: #1d1d1d;
     padding: 1rem 0;
 }
 
@@ -27,8 +28,9 @@
 }
 
 .main {
-    flex: 11;
-    background-color: #021218;
+    flex: 10;
+    // background-color: #021218;
+    background-color: #1d1d1d;
     height: fit-content;
 
     & * {
@@ -40,7 +42,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 1.25rem;
     }
 }
 
