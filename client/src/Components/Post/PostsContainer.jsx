@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Tabs from './Tabs'
 import PostsList from './PostsList'
+import AddPostForm from './AddPostForm'
 import styles from './styles/postscontainer.module.scss'
 import { Button } from '@mui/material'
 
-const PostsContainer = () => {
+const PostsContainer = ({ auth }) => {
+    const [isAuth, setIsAuth] = useState(false)
+    const [showAddPostForm, setShowAddPostForm] = useState(false)
+
+    useEffect(() => {
+        setIsAuth(auth)
+    }, [auth])
+
+    const handlePost = () => {
+        setShowAddPostForm(!showAddPostForm)
+    }
+
     return (
         <div className={styles.container}>
             <div className={styles.sidebar}>
@@ -13,10 +25,13 @@ const PostsContainer = () => {
             <div className={styles.main}>
                 <div className={styles.header}>
                     <h1>Top Posts</h1>
-                    <Button variant='contained' >Login to Post</Button>
+                    { !showAddPostForm && <Button variant='contained' onClick={ handlePost } disabled={!isAuth}>Post to Forum</Button>}                    
+                    { showAddPostForm && <Button variant='contained' onClick={ handlePost } disabled={!isAuth}>Close Form</Button>}
                 </div>
+
+                <AddPostForm show={showAddPostForm} />
                
-                <Tabs />
+                <Tabs auth={isAuth} />
 
                 <hr style={{color: 'white'}} />
                 

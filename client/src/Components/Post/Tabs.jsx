@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles/tabs.module.scss'
 
-const Tabs = () => {
+const Tabs = ({ auth }) => {
     return (
         <div className={styles.tabs}>
 
