@@ -1,11 +1,11 @@
 import React from 'react'
 import styles from './styles/poststats.module.scss'
 
-const PostStats = ({icon, label}) => {
+const PostStats = ({icon, label, handleShowCommentForm}) => {
     return (
-        <div className={styles.container}>
-            {icon}
-            <p>{label}</p>
+        <div onClick={ handleShowCommentForm } className={styles.container}>
+            { icon }
+            <p>{ label }</p>
         </div>
     )
 }

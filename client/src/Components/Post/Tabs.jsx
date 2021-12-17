@@ -6,7 +6,7 @@ const Tabs = ({ auth }) => {
         <div className={styles.tabs}>
 
             <ul className={styles.tablinks}>
-                <li>Forum Feed</li>
+                <li className={styles.active}>Forum Feed</li>
                 <li>My Posts</li>
                 <li>Saved Posts</li>
             </ul>

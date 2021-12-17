@@ -33,4 +33,11 @@
         color: rgb(38, 126, 199);
         font-weight: 800;
     }
+
+    .btns {
+        width: 75%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }

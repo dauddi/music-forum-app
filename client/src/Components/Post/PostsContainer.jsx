@@ -29,8 +29,8 @@ const PostsContainer = ({ auth }) => {
                     { showAddPostForm && <Button variant='contained' onClick={ handlePost } disabled={!isAuth}>Close Form</Button>}
                 </div>
 
-                <AddPostForm show={showAddPostForm} />
-               
+                <AddPostForm show={showAddPostForm} setShowAddPostForm={setShowAddPostForm} />
+
                 <Tabs auth={isAuth} />
 
                 <hr style={{color: 'white'}} />

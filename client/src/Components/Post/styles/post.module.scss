@@ -43,6 +43,13 @@
         justify-content: space-between;
         align-items: center;
     }
+    .topic:hover {
+        color: #FFD166;
+        cursor: pointer;
+    }
+    .body {
+        color: lightgray;
+    }
 }
 
 .stats {
@@ -54,4 +61,11 @@
         justify-content: flex-start;
         align-items: center;
     }
+}
+
+.commentSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
 }

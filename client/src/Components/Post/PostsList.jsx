@@ -14,8 +14,6 @@ const PostsList = () => {
         setPosts([...posts])
     }, [postsData])
 
-    console.log(posts);
-
     return (
         <div className={styles.container}>
 
