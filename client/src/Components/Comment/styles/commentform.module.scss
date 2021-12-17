@@ -1,0 +1,18 @@
+.container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #1d1d1d;
+    padding: 1rem;
+    border-radius: 8px;
+
+    & > input {
+        border: 0;
+        border-bottom: 1px solid lightgray;
+        background-color: transparent;
+        color: white;
+        outline: none;
+        width: 65%;
+    }
+
+}
