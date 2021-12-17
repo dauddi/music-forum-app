@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import moment from "moment";
 
 const initialState = {
   posts: [
@@ -9,7 +10,7 @@ const initialState = {
         topic: "Unpopular opinion on Afropop Music",
         body: "Unpopular opinion on Afropop Music. npopular opinion on Afropop Music. npopular opinion on Afropop Music. npopular opinion on Afropop Music",
       },
-      creationDate: 345266525,
+      creationDate: moment().startOf("hour").fromNow(),
       owner: {
         id: 987,
         name: "Ashley Janelle",
@@ -31,12 +32,16 @@ export const postSlice = createSlice({
     createNewPost: (state, action) => {
       state.posts = [action.payload, ...state.posts];
     },
-    update: (state, action) => {
-      state = state;
+    addComment: (state, action) => {
+      state.posts.map((post) => {
+        if (post.id === action.payload.postId) {
+          post.comments = [action.payload, ...post.comments];
+        }
+      });
     },
   },
 });
 
-export const { createNewPost, update } = postSlice.actions;
+export const { createNewPost, addComment } = postSlice.actions;
 
 export default postSlice.reducer;
